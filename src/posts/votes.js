@@ -123,7 +123,6 @@ module.exports = function (Posts) {
 	}
 
 	async function unvote(pid, uid, type) {
-		console.log('heather');
 		const owner = await Posts.getPostField(pid, 'uid');
 		const voteStatus = await Posts.hasVoted(pid, uid);
 		if (parseInt(uid, 10) === parseInt(owner, 10)) {
